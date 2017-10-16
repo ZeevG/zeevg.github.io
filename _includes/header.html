@@ -1,11 +1,11 @@
-<header class="site-header" role="banner">
+<header class="site-header " role="banner">
 
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %}
-    {% assign pages = site.data.navigation.links | default: default_paths %}
+    {% assign links = site.data.navigation.links | default: default_paths %}
   
-    {% if pages %}
-      <nav class="site-nav">
+    {% if links %}
+      <nav class="site-nav {{ page.layout }}">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -18,9 +18,9 @@
         </label>
 
         <div class="trigger">
-          {% for page in pages %}
-            {% if page.title %}
-              <a class="page-link" href="{{ page.url }}">{{ page.title | escape }}</a>
+          {% for link in links %}
+            {% if link.title %}
+              <a class="page-link {% if page.layout == link.layout %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
             {% endif %}
           {% endfor %}
         </div>
