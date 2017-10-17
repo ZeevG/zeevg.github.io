@@ -11,6 +11,13 @@
     height: 100vh;
   }
 
+  .chevron {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    margin-left: -20px;
+  }
+
   .signature {
     position: absolute;
     bottom: 20px;
