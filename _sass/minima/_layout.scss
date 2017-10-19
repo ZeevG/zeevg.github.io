@@ -29,6 +29,14 @@
   }
 }
 
+
+.projects {
+  background-color: #f3f3f3;
+  font: 'Lato', sans-serif;
+}
+
+
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
@@ -156,7 +164,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  // border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
 
@@ -217,6 +225,17 @@
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+
+main .wrapper {
+  padding: ($spacing-unit * 2) 0;
+
+  h1 {
+    font-size: 2rem;
+    font: 'Rubik', sans-serif;
+    text-align: center;
   }
 }
 

@@ -1,26 +1,33 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
+<div class="posts" id="blog">
+  <div class="wrapper">
+    <h1 class="page-heading">Posts</h1>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="projects" id="projects">
+  <div class="wrapper">
+    {% for project in site.data.projects %}
+      <div class="project">
+        <a href="{{project.link}}" class="image"><img src="{{project.image}}"></a>
+        <div class="text">
+          <a href="{{project.link}}" class="title">{{project.title}}</a>
+          <div class="description">{{project.description}}</div>
+        </div>
+      </div>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+  </div>
 </div>
