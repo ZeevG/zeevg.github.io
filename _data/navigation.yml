@@ -2,20 +2,21 @@ links:
 
 - title: Home
   url: /#home
-  layout: home
-
-- title: About Me
-  url: /#about
+  layouts:
+    - home
 
 - title: Projects
   url: /#projects
 
 - title: Blog
   url: /blog
-  layout: post
+  layouts:
+    - post
+    - blog-index
+
 
 - title: GitHub
   url: https://github.com/zeevg
 
 - title: Flickr
-  url: https://flickr.com
+  url: https://www.flickr.com/photos/ZeevG

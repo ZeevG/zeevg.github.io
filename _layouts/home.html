@@ -1,31 +1,18 @@
 ---
 layout: default
 ---
-<div class="posts" id="blog">
-  <div class="wrapper">
-    <h1 class="page-heading">Posts</h1>
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li>
-          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h2>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+{% include blog-index.html %}
 
-<div class="projects" id="projects">
+<div class="projects">
   <div class="wrapper">
+    <h1 class="page-heading" id="projects">Projects</h1>
+    <p>I have more experimental projects on my GitHub profile, some of the larger mature projects are described below. Not all of these are entirely my own work. Some of them were created while at work or as part of a larger team.</p>
     {% for project in site.data.projects %}
       <div class="project">
         <a href="{{project.link}}" class="image"><img src="{{project.image}}"></a>
         <div class="text">
           <a href="{{project.link}}" class="title">{{project.title}}</a>
-          <div class="description">{{project.description}}</div>
+          <div class="description">{{project.description | markdownify }}</div>
         </div>
       </div>
     {% endfor %}

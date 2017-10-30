@@ -3,7 +3,7 @@
  */
 .site-cover {
   height: 100px;
-  background-image: url(https://c1.staticflickr.com/5/4331/37170641980_6387f0a53e_h.jpg);
+  background-image: url(/assets/home/cover.jpg);
   background-size: cover;
   background-position: center center;
 
@@ -261,9 +261,18 @@ main .wrapper {
   }
 }
 
+h2.post-title {
+  font: 28px/60px 'Karla', sans-serif;
+  display: inline-block;
+}
+h1.post-title {
+  display: inline-block;
+}
+
 .post-meta {
-  font-size: $small-font-size;
   color: $grey-color;
+  font: #{$small-font-size}/60px 'Karla', sans-serif;
+  float: right;
 }
 
 .post-link {

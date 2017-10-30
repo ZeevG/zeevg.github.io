@@ -20,7 +20,7 @@
         <div class="trigger">
           {% for link in links %}
             {% if link.title %}
-              <a class="page-link {% if page.layout == link.layout %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
+              <a class="page-link {% if link.layouts contains page.layout %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
             {% endif %}
           {% endfor %}
         </div>

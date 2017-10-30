@@ -1,14 +1,25 @@
 - title: Biosgraphy
-  image: http://zeevgilovitz.com/images/busfeed.png
+  image: /assets/home/bios.png
   link: asdfk
-  description: lakjsdfkljasklfdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk fdjkla sdkljfkla jdlkjfalk jsdlkfj alkjsd flkjalksj dklfaj 
+  description:
+    Biosgraphy is a social blogging network and was my largest project while working at Gramercy Studios.
+    Alex Louden has a great post about the technical side of *Biosgraphy*.
 
-- title: Biosgraphy
-  image: http://zeevgilovitz.com/images/busfeed.png
+- title: Python-Forecastio
+  image: /assets/home/python-forecastio.png
   link: asdfk
-  description: lakjsdfkljasklfdjkla sdkljfkla jdlkjfalk jsdlkfj alkjsd flkjalksj dklfaj 
+  description: Python-Forecastio is a popular API wrapper for the Forecast.io weather service.
 
-- title: Biosgraphy
-  image: http://zeevgilovitz.com/images/busfeed.png
+- title: BusFeed
+  image: /assets/home/busfeed.png
   link: asdfk
-  description: lakjsdfkljasklfdjkla sdkljfkla jdlkjfalk jsdlkfj alkjsd flkjalksj dklfaj 
+  description:
+    BusFeed is a single page application written using AngularJS 1.3 and the Google Maps API.
+    It provides a live feed of route information for public transport journeys.
+
+- title: BlogDown
+  image: /assets/home/blogdown.png
+  link: asdfk
+  description:
+    A simple Markdown based blogging application.
+    Written in CoffeeScript using Backbone.js - running entirely client side. It was inspired by Ghost and is powered by GitHub Gists.
