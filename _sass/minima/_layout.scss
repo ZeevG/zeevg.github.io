@@ -90,9 +90,6 @@
       color: #000;
       text-decoration: none;
     }
-    &:last-child {
-      margin-right: 0;
-    }
     &:first-child {
       margin-left: 0;
     }
@@ -105,12 +102,7 @@
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
+    border: none;
     text-align: right;
 
     label[for="nav-trigger"] {
@@ -132,7 +124,7 @@
       text-align: center;
 
       > svg path {
-        fill: $grey-color-dark;
+        fill: $grey-color-light;
       }
     }
 
@@ -148,12 +140,13 @@
 
     .page-link {
       display: block;
-      padding: 5px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
       margin-left: 20px;
+      padding: 12px 0;
+
+      &.active {
+        border: none;
+        padding: 12px 0;
+      }
     }
   }
 }
@@ -230,12 +223,12 @@
 
 
 main .wrapper {
-  padding: ($spacing-unit * 2) 0;
 
   h1 {
     font-size: 2rem;
-    font: 'Rubik', sans-serif;
+    font: 28px/60px 'Rubik', sans-serif;
     text-align: center;
+    padding-top: $spacing-unit;
   }
 }
 
