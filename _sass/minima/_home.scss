@@ -4,6 +4,7 @@
 
         .image {
             width: calc(33% - (#{$spacing-unit} * 2));
+            height: calc(33% - (#{$spacing-unit} * 2));
             margin-right: auto;
             margin-left: auto;
             padding-right: $spacing-unit;
@@ -22,6 +23,10 @@
             @include media-query($on-palm) {
                 width: calc(33% - (#{$spacing-unit} * 2));
                 display: none;
+            }
+
+            img {
+                border-radius: 50%;
             }
         }
 

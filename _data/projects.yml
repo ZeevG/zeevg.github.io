@@ -1,9 +1,15 @@
-- title: Biosgraphy
+- title: Location Heatmap
+  image: /assets/home/location-heatmap.png
+  link: https://zeevgilovitz.com/Location-Heatmap
+  description:
+    This project is a data visualisation tool that allows you to explore your Google location history in an interactive way.
+
+- title: Location Heatmap
   image: /assets/home/bios.png
-  link: asdfk
+  link: https://alexlouden.com/projects/biosgraphy.html
   description:
     Biosgraphy is a social blogging network and was my largest project while working at Gramercy Studios.
-    Alex Louden has a great post about the technical side of *Biosgraphy*.
+    Alex Louden has a great post about the technical side of [Biosgraphy](https://alexlouden.com/projects/biosgraphy.html).
 
 - title: Python-Forecastio
   image: /assets/home/python-forecastio.png
