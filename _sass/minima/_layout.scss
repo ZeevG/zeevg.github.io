@@ -1,14 +1,18 @@
 /**
  * Site header
  */
-.site-cover {
-  height: 100px;
+.site-nav .site-cover {
+  height: 75px;
   background-image: url(/assets/home/cover.jpg);
-  background-size: cover;
+  background-size: 100% 350px;
   background-position: center center;
+  position: relative;
+  z-index: -10;
+  transition: height 0.25s ease-out;
 
   &.home {
     height: 100vh;
+    background-size: cover;
   }
 
   .chevron {
@@ -48,20 +52,24 @@
 .site-nav {
   line-height: $base-line-height * $base-font-size * 2.25;
   background-color: transparent;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px;
-  height: 60px;
+  height: auto;
   background: rgba(0, 0, 0, 0.6);
 
   &.home {
-    height: 230px;
     background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.2)), color-stop(100%, transparent));
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  }
+
+  .trigger {
+    position: absolute;
+    margin: 10px;
+    transition: height 0.25s ease-out;
   }
   
   .nav-trigger {
@@ -112,6 +120,7 @@
       height: 36px;
       z-index: 2;
       cursor: pointer;
+      margin: 5px;
     }
 
     .menu-icon {
@@ -130,18 +139,34 @@
 
     input ~ .trigger {
       clear: both;
-      display: none;
+      right: 0;
+      top: 40px;
+      margin: 5px;
+
+      overflow: hidden;
+      height: 0;
     }
 
     input:checked ~ .trigger {
-      display: block;
       padding-bottom: 5px;
+      height: 270px;
+    }
+
+    input:checked ~ .site-cover:not(.home) {
+      height: 350px;
     }
 
     .page-link {
       display: block;
       margin-left: 20px;
       padding: 12px 0;
+      right: 0;
+
+      &:hover {
+        background: none;
+        color: #fff;
+        text-decoration: none;
+      }
 
       &.active {
         border: none;
